@@ -1,5 +1,11 @@
 .btn-board {
-  --border-style: 2px solid #9ece6a;
+  --border-style: 2px solid #565f89;
+  background: transparent;
+  border: none;
+  outline: hidden;
+  font-size: 60px;
+  width: 150px;
+  height: 150px;
 }
 
 .match, .btn-board {
@@ -20,11 +26,13 @@
   border-right: var(--border-style);
 }
 
-.btn-board:nth-child(2), .btn-board:nth-child(5) {
+.btn-board:nth-child(2),
+.btn-board:nth-child(5) {
   border-bottom: var(--border-style);
 }
 
-.btn-board:nth-child(3), .btn-board:nth-child(6) {
+.btn-board:nth-child(3),
+.btn-board:nth-child(6) {
   border-bottom: var(--border-style);
   border-left: var(--border-style);
 }
@@ -32,15 +40,6 @@
 .btn-board:nth-child(7) { border-right: var(--border-style); }
 
 .btn-board:nth-child(9) { border-left: var(--border-style); }
-
-.btn-board {
-  background: transparent;
-  border: none;
-  outline: hidden;
-  font-size: 60px;
-  width: 150px;
-  height: 150px;
-}
 
 .btn-board-x:disabled {
   color: #2ac3de;
