@@ -9,10 +9,10 @@ import '../styles/Match.css';
 
 function Match() {
   const { inform } = useContext(ContextApi);
-  const [win, setWin] = useState('');
-  const [round, setRound] = useState(1);
-  const [player, setPlayer] = useState('X');
   const [spaces, setSpaces] = useState(['', '', '', '', '', '', '', '', '']);
+  const [round, setRound] = useState(1);
+  const [win, setWin] = useState('');
+  const [player, setPlayer] = useState('X');
 
   const verify = new Verify();
   const interations = new Interations();
@@ -25,7 +25,10 @@ function Match() {
 
   return (
     <main>
-      <Icons />
+      <Icons
+        player={ player }
+        inform={ inform }
+      />
       <Board
         spaces={ spaces }
         win={ win }

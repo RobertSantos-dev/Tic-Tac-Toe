@@ -8,16 +8,25 @@
   height: 150px;
 }
 
-.match, .btn-board {
+.match, .btn-board, .section-icons{
   align-items: center;
   display: flex;
+}
+
+.match, .section-icons {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+}
+
+.match, .btn-board {
   justify-content: center;
 }
 
 .match {
   flex-wrap: wrap;
-  margin: auto;
   width: 460px;
+  z-index: 2;
 }
 
 .btn-board:nth-child(1),
@@ -51,6 +60,7 @@
   text-shadow: 0 0 5px #e0af68;
 }
 
+
 .btn-next {
   background-color: #b4f9f8;
   border: none;
@@ -63,4 +73,50 @@
 
 .btn-next:hover {
   box-shadow: 0 0 15px #9aa5ce;
+}
+
+.section-icons {
+  justify-content: space-between;
+  width: 80%;
+  top: 30%;
+  z-index: 1;
+}
+
+.section-icons svg {
+  font-size: 200px;
+}
+
+.icon1, .icon2 {
+  border-radius: 40px;
+  box-shadow: 0 0 4px black;
+}
+
+.icon1 svg {
+  color: #2ac3de;
+}
+
+.icon2 svg {
+  color: #ff9e64;
+}
+
+.event1, .event2 {
+  box-shadow: 0 0 15px black;
+}
+
+.event1 svg, .event2 svg {
+  transition: 0.3s ease;
+}
+
+.event1 svg {
+  filter: drop-shadow(0 0 5px #2ac3de);
+}
+
+.event2 svg {
+  filter: drop-shadow(0 0 5px #ff9e64);
+}
+
+.section-icons div p {
+  text-align: center;
+  font-size: 19px;
+  font-weight: bold;
 }
