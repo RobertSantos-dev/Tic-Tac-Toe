@@ -1,4 +1,4 @@
-export default class MatchService {
+export class MatchService {
   constructor() {
     this.positionsWins = [
       [0, 1, 2], [0, 3, 6], [1, 4, 7], [2, 5, 8],
@@ -6,26 +6,36 @@ export default class MatchService {
     ];
   }
 
-  verifyWins(match, player, setWin) {
+  verifyWins(match, player, setWin, inform) {
     const res = this.positionsWins.filter((e) => {
       const x = e.every((e2) => match[e2] === 'X');
       const o = e.every((e2) => match[e2] === 'O');
        return x || o;
     });
 
-    if (res.length > 0) { setWin(`O vencedor é ${player}`); }
+    if (res.length > 0) {
+      setWin(
+        `O vencedor é ${player !== 'X' ? inform.playerOne : inform.playerTwo}`);
+    }
   }
   
   clicks(e, setPlayer, setSpaces) {
     const i = e.target.getAttribute('data-i');
     setPlayer((state) => {
-      const player = state === 'X' ? 'O' : 'X';
-      setSpaces((state) => {
-        state[i] = player;
-        return [...state];
+      setSpaces((state2) => {
+        state2[i] = state;
+        return [...state2];
       });
-      return player;
+      return state === 'X' ? 'O' : 'X';
     });
     e.target.disabled = true;
+  }
+}
+
+export class MatchConfig {
+  reset(setSpaces, setWin, setPlayer) {
+    setSpaces(['', '', '', '', '', '', '', '', '']);
+    setWin('');
+    setPlayer('X');
   }
 }

@@ -1,13 +1,20 @@
+import { Route, Switch } from 'react-router-dom';
+
 import Header from './components/Header';
-import Match from './components/Match';
+import Provider from './context/Provider';
+import Start from './pages/Start';
+import Match from './pages/Match';
 import './styles/App.css';
 
 function App() {
   return (
-    <div className='App'>
+    <Provider>
       <Header />
-      <Match />
-    </div>
+      <Switch>
+        <Route exact path='/' component={ Start } />
+        <Route exact path='/match' component={ Match } />
+      </Switch>
+    </Provider>
   )
 }
 

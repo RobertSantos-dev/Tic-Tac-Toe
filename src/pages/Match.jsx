@@ -1,16 +1,19 @@
-import { useState, useEffect } from 'react';
-import MatchService from '../services/MatchService';
+import { useState, useEffect, useContext } from 'react';
+import ContextApi from '../context/ContextApi';
+import { MatchService, MatchConfig } from '../services/MatchService';
 import '../styles/Match.css';
 
 function Match() {
+  const { inform } = useContext(ContextApi);
   const [spaces, setSpaces] = useState(['', '', '', '', '', '', '', '', '']);
   const [win, setWin] = useState('');
   const [player, setPlayer] = useState('X');
 
   const functions = new MatchService();
+  // const config = new MatchConfig();
 
   useEffect(() => {
-    functions.verifyWins(spaces, player, setWin);
+    functions.verifyWins(spaces, player, setWin, inform);
   }, [spaces]);
 
   return (

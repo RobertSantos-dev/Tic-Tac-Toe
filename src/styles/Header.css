@@ -1,3 +1,17 @@
 header {
   margin-bottom: 50px;
+  transition: 0.5s ease;
+}
+
+.h1-match, .h1-menu {
+  line-height: 1.1;
+  text-align: center;
+}
+
+.h1-match {
+  font-size: 3em;
+}
+
+.h1-menu {
+  font-size: 5em;
 }
