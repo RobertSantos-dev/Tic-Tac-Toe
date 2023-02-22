@@ -1,4 +1,4 @@
-export class MatchService {
+export class Verify {
   constructor() {
     this.positionsWins = [
       [0, 1, 2], [0, 3, 6], [1, 4, 7], [2, 5, 8],
@@ -6,19 +6,31 @@ export class MatchService {
     ];
   }
 
-  verifyWins(match, player, setWin, inform) {
-    const res = this.positionsWins.filter((e) => {
+  verifyWins(match) {
+    return this.positionsWins.filter((e) => {
       const x = e.every((e2) => match[e2] === 'X');
       const o = e.every((e2) => match[e2] === 'O');
-       return x || o;
+      return x || o;
     });
-
-    if (res.length > 0) {
-      setWin(
-        `O vencedor é ${player !== 'X' ? inform.playerOne : inform.playerTwo}`);
-    }
   }
-  
+
+  verifyMatch(setWin, player, inform) {
+    setWin(`${player !== 'X' ? inform.playerOne : inform.playerTwo}`);
+  }
+
+  verifyRounds(setRound, setSpaces, setWin, setPlayer) {
+    setRound((state) => state += 1);
+    this.reset(setSpaces, setWin, setPlayer);
+  }
+
+  reset(setSpaces, setWin, setPlayer) {
+    setSpaces(['', '', '', '', '', '', '', '', '']);
+    setWin('');
+    setPlayer('X');
+  }
+}
+
+export class Interations {
   clicks(e, setPlayer, setSpaces) {
     const i = e.target.getAttribute('data-i');
     setPlayer((state) => {
@@ -29,13 +41,5 @@ export class MatchService {
       return state === 'X' ? 'O' : 'X';
     });
     e.target.disabled = true;
-  }
-}
-
-export class MatchConfig {
-  reset(setSpaces, setWin, setPlayer) {
-    setSpaces(['', '', '', '', '', '', '', '', '']);
-    setWin('');
-    setPlayer('X');
   }
 }

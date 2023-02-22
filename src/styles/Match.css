@@ -50,3 +50,17 @@
   color: #ff9e64;
   text-shadow: 0 0 5px #e0af68;
 }
+
+.btn-next {
+  background-color: #b4f9f8;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px;
+  transition: 0.3s ease;
+}
+
+.btn-next:hover {
+  box-shadow: 0 0 15px #9aa5ce;
+}
