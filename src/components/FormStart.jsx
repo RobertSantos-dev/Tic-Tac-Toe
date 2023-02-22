@@ -61,6 +61,7 @@ function FormStart() {
       </fieldset>
       <fieldset>
         <button
+          className='btn-start-form'
           onClick={ () => { service.formValid(inform, history, setUrl) } }
         >
           Iniciar

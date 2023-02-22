@@ -1,0 +1,70 @@
+.section-start, form, fieldset {
+  align-items: center;
+  display: flex;
+}
+
+.section-start {
+  height: 150px;
+  justify-content: center;
+  margin: 100px auto 0 auto;
+  width: 95%;
+}
+
+.btn-start, .btn-start-form {
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px;
+  transition: 0.3s ease;
+}
+
+.btn-start {
+  background-color: #bb9af7;
+  font-size: 20px;
+}
+
+.btn-start:hover {
+  box-shadow: 0 0 15px #bb9af7;
+}
+
+.btn-start-form {
+  background-color: #f7768e;
+  font-size: 18px;
+}
+
+.btn-start-form:hover {
+  box-shadow: 0 0 15px #f7768e;
+}
+
+form {
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+fieldset:nth-child(1) {
+  justify-content: space-between;
+}
+
+fieldset:nth-child(2) {
+  justify-content: center;
+}
+
+fieldset {
+  border: none;
+  width: 100%;
+}
+
+fieldset label {
+  font-weight: bold;
+}
+
+fieldset input {
+  background-color: #a9b1d6;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 30px;
+  outline: none;
+  padding: 3px;
+  width: 170px;
+}
