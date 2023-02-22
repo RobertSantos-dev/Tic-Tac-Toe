@@ -3,14 +3,16 @@ import { useState, useEffect, useContext } from 'react';
 import ContextApi from '../context/ContextApi';
 import { Verify, Interations } from '../services/MatchService';
 import Icons from '../components/matchComponents/Icons';
+import Board from '../components/matchComponents/Board';
+import ButtonNext from '../components/matchComponents/ButtonNext';
 import '../styles/Match.css';
 
 function Match() {
   const { inform } = useContext(ContextApi);
-  const [spaces, setSpaces] = useState(['', '', '', '', '', '', '', '', '']);
-  const [round, setRound] = useState(1);
   const [win, setWin] = useState('');
+  const [round, setRound] = useState(1);
   const [player, setPlayer] = useState('X');
+  const [spaces, setSpaces] = useState(['', '', '', '', '', '', '', '', '']);
 
   const verify = new Verify();
   const interations = new Interations();
@@ -24,35 +26,23 @@ function Match() {
   return (
     <main>
       <Icons />
-      <section className='match'>
-      { spaces.map((e, i) => (
-        <button
-          key={ i }
-          data-i={ i }
-          disabled={ win !== '' && true }
-          className={`btn-board ${ e === 'X' ? 'btn-board-x' : 'btn-board-o' }`}
-          onClick={ (e) => interations.clicks(e, setPlayer, setSpaces) }
-        >
-          { e }
-        </button>
-      )) }
-      </section>
-      <section>
-      {
-        win !== '' && round <= inform.rounds
-          ? (
-            <button
-              className='btn-next'
-              onClick={
-                () => verify.verifyRounds(setRound, setSpaces, setWin, setPlayer)
-              }
-            >
-              Proximo
-            </button>
-          )
-          : ''
-      }
-      </section>
+      <Board
+        spaces={ spaces }
+        win={ win }
+        interations={ interations }
+        setPlayer={ setPlayer }
+        setSpaces={ setSpaces }
+      />
+      <ButtonNext
+        win={ win }
+        round={ round }
+        inform={ inform }
+        verify={ verify }
+        setRound={ setRound }
+        setSpaces={ setSpaces }
+        setWin={ setWin }
+        setPlayer={ setPlayer }
+      />
     </main>
   )
 }

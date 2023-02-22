@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import ContextApi from '../context/ContextApi';
 import FormStart from '../components/FormStart';
+import Button from '../components/all/Button';
 import '../styles/Start.css';
 
 function Start() {
@@ -14,14 +15,14 @@ function Start() {
 
   return (
     <section className='section-start'>
-      { !isForm &&
-          <button
-            className='btn-start'
-            onClick={ () => setIsForm(true) }
-          >
-            Começar
-          </button>}
-
+      { !isForm
+        && (
+          <Button
+            name='btn-start'
+            click={ () => setIsForm(true) }
+            text='Começar'
+          />
+      )}
       { isForm && <FormStart /> }
     </section>
   );
