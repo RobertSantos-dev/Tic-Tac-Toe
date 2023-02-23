@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 
-import ContextApi from '../context/ContextApi';
-import '../styles/Header.css';
+import ContextApi from '../../context/ContextApi';
+import '../../styles/Header.css';
 
 function Header() {
   const { url } = useContext(ContextApi);

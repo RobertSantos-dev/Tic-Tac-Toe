@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import ContextApi from '../context/ContextApi';
-import StartService from '../services/StartService';
+import ContextApi from '../../context/ContextApi';
+import StartService from '../../services/StartService';
 
 function FormStart() {
   const history = useHistory();

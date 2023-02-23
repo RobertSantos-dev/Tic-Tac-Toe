@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 
-import Header from './components/Header';
+import Header from './components/all/Header';
 import Provider from './context/Provider';
 import Start from './pages/Start';
 import Match from './pages/Match';

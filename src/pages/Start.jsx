@@ -2,7 +2,7 @@ import { useState, useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import ContextApi from '../context/ContextApi';
-import FormStart from '../components/FormStart';
+import FormStart from '../components/startComponents/FormStart';
 import Button from '../components/all/Button';
 import '../styles/Start.css';
 
