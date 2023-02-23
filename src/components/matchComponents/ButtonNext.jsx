@@ -13,6 +13,7 @@ export default function ButtonNext(props) {
                   props.setPlayer
                 );
                 props.setTie(false);
+                props.setPlayer(props.interations.startPlayer());
               }}
               text='Proximo'
             /> )
@@ -23,8 +24,20 @@ export default function ButtonNext(props) {
               click={ () => {
                 props.verify.reset(props.setSpaces, props.setWin, props.setPlayer);
                 props.setTie(false);
+                props.setPlayer(props.interations.startPlayer());
               }}
               text='Reiniciar'
+            /> )
+          : '' }
+      { props.round > props.inform.rounds
+          ? ( <Button
+              name='btn-next'
+              click={ () => {
+                props.verify.reset(props.setSpaces, props.setWin, props.setPlayer);
+                props.setTie(false);
+                props.history.push('/');
+              }}
+              text='Finalizar'
             /> )
           : '' }
     </section>

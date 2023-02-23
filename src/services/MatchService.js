@@ -35,6 +35,11 @@ export class Verify {
 }
 
 export class Interations {
+  startPlayer() {
+    const num = Math.floor(Math.random() * 2);
+    return num === 0 ? 'X' : 'O';
+  }
+
   clicks(e, setPlayer, setSpaces) {
     const i = e.target.getAttribute('data-i');
     setPlayer((state) => {

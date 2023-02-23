@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import ContextApi from '../context/ContextApi';
 import { Verify, Interations } from '../services/MatchService';
@@ -8,15 +9,26 @@ import ButtonNext from '../components/matchComponents/ButtonNext';
 import '../styles/Match.css';
 
 function Match() {
-  const { inform } = useContext(ContextApi);
+  const history = useHistory();
+  const { inform, setUrl } = useContext(ContextApi);
+
   const [win, setWin] = useState('');
   const [tie, setTie] = useState(false);
   const [round, setRound] = useState(1);
-  const [player, setPlayer] = useState('X');
+  const [player, setPlayer] = useState('');
   const [spaces, setSpaces] = useState(['', '', '', '', '', '', '', '', '']);
 
   const verify = new Verify();
   const interations = new Interations();
+
+  useEffect(() => {
+    if(inform.playerOne === '' || inform.playerTwo === '') {
+      setUrl('/');
+      history.push('/');
+    } else {
+      setPlayer(interations.startPlayer());
+    }
+  }, []);
 
   useEffect(() => {
     const resultWin = verify.verifyWins(spaces);
@@ -46,6 +58,8 @@ function Match() {
         round={ round }
         inform={ inform }
         verify={ verify }
+        interations={ interations }
+        history={ history }
         setWin={ setWin }
         setTie={ setTie }
         setRound={ setRound }

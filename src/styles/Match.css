@@ -25,6 +25,7 @@
 
 .match {
   flex-wrap: wrap;
+  top: 20%;
   width: 460px;
   z-index: 2;
 }
@@ -67,6 +68,7 @@
   border-radius: 10px;
   font-size: 17px;
   font-weight: bold;
+  margin: 10px auto 30px auto;
   padding: 5px;
   transition: 0.3s ease;
 }
