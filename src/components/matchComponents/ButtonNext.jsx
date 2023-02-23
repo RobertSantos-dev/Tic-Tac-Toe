@@ -2,7 +2,7 @@ import Button from '../all/Button';
 
 export default function ButtonNext(props) {
   return (
-    <section>
+    <section className='section-btn-next'>
       { props.win !== '' && props.round <= props.inform.rounds
           ? ( <Button
               name='btn-next'

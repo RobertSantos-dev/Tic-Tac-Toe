@@ -8,7 +8,7 @@
   height: 150px;
 }
 
-.match, .btn-board, .section-icons{
+.match, .btn-board, .section-icons, .section-btn-next{
   align-items: center;
   display: flex;
 }
@@ -19,7 +19,7 @@
   transform: translate(-50%);
 }
 
-.match, .btn-board {
+.match, .btn-board, .section-btn-next {
   justify-content: center;
 }
 
@@ -61,14 +61,13 @@
   text-shadow: 0 0 5px #e0af68;
 }
 
-
 .btn-next {
   background-color: #b4f9f8;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
   font-size: 17px;
   font-weight: bold;
-  margin: 10px auto 30px auto;
   padding: 5px;
   transition: 0.3s ease;
 }
