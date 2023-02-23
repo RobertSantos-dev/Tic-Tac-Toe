@@ -11,9 +11,20 @@ export default function ButtonNext(props) {
                   props.setSpaces,
                   props.setWin,
                   props.setPlayer
-                )
+                );
+                props.setTie(false);
               }}
               text='Proximo'
+            /> )
+          : '' }
+      { props.tie && props.round <= props.inform.rounds
+          ? ( <Button
+              name='btn-next'
+              click={ () => {
+                props.verify.reset(props.setSpaces, props.setWin, props.setPlayer);
+                props.setTie(false);
+              }}
+              text='Reiniciar'
             /> )
           : '' }
     </section>

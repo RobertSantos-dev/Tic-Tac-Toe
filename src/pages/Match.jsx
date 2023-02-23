@@ -9,18 +9,21 @@ import '../styles/Match.css';
 
 function Match() {
   const { inform } = useContext(ContextApi);
-  const [spaces, setSpaces] = useState(['', '', '', '', '', '', '', '', '']);
-  const [round, setRound] = useState(1);
   const [win, setWin] = useState('');
+  const [tie, setTie] = useState(false);
+  const [round, setRound] = useState(1);
   const [player, setPlayer] = useState('X');
+  const [spaces, setSpaces] = useState(['', '', '', '', '', '', '', '', '']);
 
   const verify = new Verify();
   const interations = new Interations();
 
   useEffect(() => {
-    const result = verify.verifyWins(spaces);
+    const resultWin = verify.verifyWins(spaces);
+    const resultTie = verify.verifyTie(spaces);
 
-    if (result.length > 0) verify.verifyMatch(setWin, player, inform);
+    if (resultWin.length === 0 && resultTie) setTie(true);
+    if (resultWin.length > 0) verify.verifyMatch(setWin, player, inform);
   }, [spaces]);
 
   return (
@@ -32,18 +35,21 @@ function Match() {
       <Board
         spaces={ spaces }
         win={ win }
+        tie={ tie }
         interations={ interations }
         setPlayer={ setPlayer }
         setSpaces={ setSpaces }
       />
       <ButtonNext
         win={ win }
+        tie={ tie }
         round={ round }
         inform={ inform }
         verify={ verify }
+        setWin={ setWin }
+        setTie={ setTie }
         setRound={ setRound }
         setSpaces={ setSpaces }
-        setWin={ setWin }
         setPlayer={ setPlayer }
       />
     </main>

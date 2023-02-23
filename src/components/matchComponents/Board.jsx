@@ -1,13 +1,13 @@
-export default function Board({ spaces, win, interations, setPlayer, setSpaces }) {
+export default function Board(props) {
   return (
     <section className='match'>
-      { spaces.map((e, i) => (
+      { props.spaces.map((e, i) => (
         <button
           key={ i }
           data-i={ i }
-          disabled={ win !== '' && true }
+          disabled={ props.win !== '' || props.tie ? true : false }
           className={`btn-board ${ e === 'X' ? 'btn-board-x' : 'btn-board-o' }`}
-          onClick={ (e) => interations.clicks(e, setPlayer, setSpaces) }
+          onClick={ (e) => props.interations.clicks(e, props.setPlayer, props.setSpaces) }
         >
           { e }
         </button>

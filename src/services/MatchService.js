@@ -14,6 +14,10 @@ export class Verify {
     });
   }
 
+  verifyTie(match) {
+    return match.every((e) => e !== '');
+  }
+
   verifyMatch(setWin, player, inform) {
     setWin(`${player !== 'X' ? inform.playerOne : inform.playerTwo}`);
   }
