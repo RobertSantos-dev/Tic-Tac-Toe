@@ -1,41 +1,49 @@
+import { useContext } from 'react';
+import ContextApi from '../../context/ContextApi';
+
 import Button from '../all/Button';
 
-export default function ButtonNext(props) {
+export default function ButtonNext({ verify, interations }) {
+  const {
+    win, tie, round, inform, history,
+    setWin, setTie, setRound, setSpaces, setPlayer
+  } = useContext(ContextApi);
+
   return (
     <section className='section-btn-next'>
-      { props.win !== '' && props.round <= props.inform.rounds
+      { win !== '' && round <= inform.rounds
           ? ( <Button
               name='btn-next'
-              click={ () => { props.verify.verifyRounds(
-                  props.setRound,
-                  props.setSpaces,
-                  props.setWin,
-                  props.setPlayer
+              click={ () => { verify.verifyRounds(
+                  setRound,
+                  setSpaces,
+                  setWin,
+                  setPlayer
                 );
-                props.setTie(false);
-                props.setPlayer(props.interations.startPlayer());
+                setTie(false);
+                setPlayer(interations.startPlayer());
               }}
               text='Proximo'
             /> )
           : '' }
-      { props.tie && props.round <= props.inform.rounds
+      { tie && round <= inform.rounds
           ? ( <Button
               name='btn-next'
               click={ () => {
-                props.verify.reset(props.setSpaces, props.setWin, props.setPlayer);
-                props.setTie(false);
-                props.setPlayer(props.interations.startPlayer());
+                verify.reset(setSpaces, setWin, setPlayer);
+                setTie(false);
+                setPlayer(interations.startPlayer());
               }}
               text='Reiniciar'
             /> )
           : '' }
-      { props.round > props.inform.rounds
+      { round > inform.rounds
           ? ( <Button
               name='btn-next'
               click={ () => {
-                props.verify.reset(props.setSpaces, props.setWin, props.setPlayer);
-                props.setTie(false);
-                props.history.push('/');
+                verify.reset(setSpaces, setWin, setPlayer);
+                setTie(false);
+                history.push('/');
               }}
               text='Finalizar'
             /> )

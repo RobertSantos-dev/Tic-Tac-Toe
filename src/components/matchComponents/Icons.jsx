@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { BsPersonFill } from 'react-icons/bs';
+import ContextApi from '../../context/ContextApi';
 
-export default function Icons({ player, inform }) {
+export default function Icons() {
+  const { player, inform } = useContext(ContextApi);
+
   return (
     <section className='section-icons'>
       <div className={ `icon1 ${player === 'X' ? 'event1' : ''}` }>

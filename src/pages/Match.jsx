@@ -1,22 +1,18 @@
-import { useState, useEffect, useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useEffect, useContext } from 'react';
 
 import ContextApi from '../context/ContextApi';
-import { Verify, Interations } from '../services/MatchService';
 import Icons from '../components/matchComponents/Icons';
 import Board from '../components/matchComponents/Board';
 import ButtonNext from '../components/matchComponents/ButtonNext';
+
+import { Verify, Interations } from '../services/MatchService';
 import '../styles/Match.css';
 
-function Match() {
-  const history = useHistory();
-  const { inform, setUrl } = useContext(ContextApi);
-
-  const [win, setWin] = useState('');
-  const [tie, setTie] = useState(false);
-  const [round, setRound] = useState(1);
-  const [player, setPlayer] = useState('');
-  const [spaces, setSpaces] = useState(['', '', '', '', '', '', '', '', '']);
+export default function Match() {
+  const {
+    inform, player, history, spaces,
+    setUrl, setTie, setWin, setPlayer,
+  } = useContext(ContextApi);
 
   const verify = new Verify();
   const interations = new Interations();
@@ -26,7 +22,7 @@ function Match() {
       setUrl('/');
       history.push('/');
     } else {
-      setPlayer(interations.startPlayer());
+      setPlayer(() => interations.startPlayer());
     }
   }, []);
 
@@ -40,34 +36,9 @@ function Match() {
 
   return (
     <main>
-      <Icons
-        player={ player }
-        inform={ inform }
-      />
-      <Board
-        spaces={ spaces }
-        win={ win }
-        tie={ tie }
-        interations={ interations }
-        setPlayer={ setPlayer }
-        setSpaces={ setSpaces }
-      />
-      <ButtonNext
-        win={ win }
-        tie={ tie }
-        round={ round }
-        inform={ inform }
-        verify={ verify }
-        interations={ interations }
-        history={ history }
-        setWin={ setWin }
-        setTie={ setTie }
-        setRound={ setRound }
-        setSpaces={ setSpaces }
-        setPlayer={ setPlayer }
-      />
+      <Icons />
+      <Board interations={ interations } />
+      <ButtonNext verify={ verify } interations={ interations } />
     </main>
   )
 }
-
-export default Match;
