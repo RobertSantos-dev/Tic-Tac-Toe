@@ -1,0 +1,23 @@
+@media screen and (max-width: 830px) {
+  fieldset:nth-child(1) {
+    height: 105px;
+    flex-direction: column;
+  }
+
+  .section-start {
+    height: 100%;
+  }
+
+  fieldset label, .section-start {
+    width: 100%;
+  }
+
+  fieldset label {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  fieldset label input {
+    width: 70%;
+  }
+}

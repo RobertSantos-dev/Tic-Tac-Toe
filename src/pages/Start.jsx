@@ -4,7 +4,9 @@ import ContextApi from '../context/ContextApi';
 
 import FormStart from '../components/startComponents/FormStart';
 import Button from '../components/all/Button';
-import '../styles/Start.css';
+
+import '../styles/startStyles/Start.css';
+import '../styles/startStyles/StartMobile.css';
 
 function Start() {
   const { location: { pathname } } = useHistory();

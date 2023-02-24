@@ -6,7 +6,8 @@ import Board from '../components/matchComponents/Board';
 import ButtonNext from '../components/matchComponents/ButtonNext';
 
 import { Verify, Interations } from '../services/MatchService';
-import '../styles/Match.css';
+import '../styles/matchStyles/Match.css';
+import '../styles/matchStyles/MatchMobile.css';
 
 export default function Match() {
   const {

@@ -1,11 +1,14 @@
 .btn-board {
   --border-style: 2px solid #565f89;
   background: transparent;
-  border: none;
   outline: hidden;
   font-size: 60px;
   width: 150px;
   height: 150px;
+}
+
+.btn-next, .btn-board {
+  border: none;
 }
 
 .match, .btn-board, .section-icons, .section-btn-next{
@@ -52,28 +55,36 @@
 .btn-board:nth-child(9) { border-left: var(--border-style); }
 
 .btn-board-x:disabled {
-  color: #2ac3de;
   text-shadow: 0 0 5px #73daca;
 }
 
 .btn-board-o:disabled {
-  color: #ff9e64;
   text-shadow: 0 0 5px #e0af68;
+}
+
+.btn-board-x:disabled, .icon1 svg {
+  color: var(--color-x);
+}
+
+.btn-board-o:disabled, .icon2 svg {
+  color: var(--color-o);
 }
 
 .btn-next {
   background-color: #b4f9f8;
-  border: none;
   border-radius: 10px;
   cursor: pointer;
   font-size: 17px;
-  font-weight: bold;
   padding: 5px;
   transition: 0.3s ease;
 }
 
 .btn-next:hover {
   box-shadow: 0 0 15px #9aa5ce;
+}
+
+.btn-next, .section-icons div p {
+  font-weight: bold;
 }
 
 .section-icons {
@@ -92,14 +103,6 @@
   box-shadow: 0 0 4px black;
 }
 
-.icon1 svg {
-  color: #2ac3de;
-}
-
-.icon2 svg {
-  color: #ff9e64;
-}
-
 .event1, .event2 {
   box-shadow: 0 0 15px black;
 }
@@ -109,15 +112,14 @@
 }
 
 .event1 svg {
-  filter: drop-shadow(0 0 5px #2ac3de);
+  filter: drop-shadow(0 0 5px var(--color-x));
 }
 
 .event2 svg {
-  filter: drop-shadow(0 0 5px #ff9e64);
+  filter: drop-shadow(0 0 5px var(--color-o));
 }
 
 .section-icons div p {
   text-align: center;
   font-size: 19px;
-  font-weight: bold;
 }

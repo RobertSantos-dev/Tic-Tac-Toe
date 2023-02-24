@@ -1,0 +1,67 @@
+@media screen and (max-width: 1190px) {
+  .section-icons svg {
+    font-size: 130px;
+  }
+
+  .icon1, .icon2 {
+    border-radius: 25px;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .section-icons {
+    justify-content: space-around;
+    margin-bottom: 50px;
+    position: static;
+    transform: translate(10%);
+  }
+
+  .section-icons svg {
+    font-size: 100px;
+  }
+
+  .icon1, .icon2 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 5px;
+    width: 37%;
+  }
+
+  .icon2 svg {
+    order: 2;
+  }
+
+  .match {
+    margin-bottom: 30px;
+    position: relative;
+    width: 390px;
+    left: 50%;  
+    transform: translate(-50%);
+  }
+
+  .btn-board {
+    height: 130px;
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .section-icons svg {
+    font-size: 120px;
+  }
+
+  .icon1, .icon2 {
+    width: 45%;
+    height: 70px;
+  }
+
+  .match {
+    width: 360px;
+  }
+
+  .btn-board {
+    height: 120px;
+    width: 120px;
+  }
+}

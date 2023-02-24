@@ -15,3 +15,13 @@ header {
 .h1-menu {
   font-size: 5em;
 }
+
+@media screen and (max-width: 460px) {
+  .h1-menu {
+    font-size: 4em;
+  }
+
+  .h1-match {
+    font-size: 2.5em;
+  }
+}
