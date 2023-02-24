@@ -1,6 +1,6 @@
 import { useEffect, useContext } from 'react';
-
 import ContextApi from '../context/ContextApi';
+
 import Icons from '../components/matchComponents/Icons';
 import Board from '../components/matchComponents/Board';
 import ButtonNext from '../components/matchComponents/ButtonNext';
@@ -22,7 +22,7 @@ export default function Match() {
       setUrl('/');
       history.push('/');
     } else {
-      setPlayer(() => interations.startPlayer());
+      setPlayer(interations.startPlayer());
     }
   }, []);
 

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-
 import ContextApi from './ContextApi';
 
 function Provider({ children }) {

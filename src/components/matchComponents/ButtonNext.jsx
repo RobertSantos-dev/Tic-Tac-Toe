@@ -6,12 +6,12 @@ import Button from '../all/Button';
 export default function ButtonNext({ verify, interations }) {
   const {
     win, tie, round, inform, history,
-    setWin, setTie, setRound, setSpaces, setPlayer
+    setWin, setTie, setRound, setSpaces, setPlayer, setInform
   } = useContext(ContextApi);
 
   return (
     <section className='section-btn-next'>
-      { win !== '' && round <= inform.rounds
+      { win !== '' && round < Number(inform.rounds)
           ? ( <Button
               name='btn-next'
               click={ () => { verify.verifyRounds(
@@ -26,7 +26,7 @@ export default function ButtonNext({ verify, interations }) {
               text='Proximo'
             /> )
           : '' }
-      { tie && round <= inform.rounds
+      { tie
           ? ( <Button
               name='btn-next'
               click={ () => {
@@ -37,11 +37,13 @@ export default function ButtonNext({ verify, interations }) {
               text='Reiniciar'
             /> )
           : '' }
-      { round > inform.rounds
+      { round === Number(inform.rounds) && win !== '' && !tie
           ? ( <Button
               name='btn-next'
               click={ () => {
                 verify.reset(setSpaces, setWin, setPlayer);
+                verify.resetInform(setInform);
+                setRound(1);
                 setTie(false);
                 history.push('/');
               }}

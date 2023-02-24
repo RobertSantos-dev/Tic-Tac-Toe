@@ -27,7 +27,11 @@ export class Verify {
     this.reset(setSpaces, setWin, setPlayer);
   }
 
-  reset(setSpaces, setWin, setPlayer) {
+  resetInform(setInform) {
+    setInform({ playerOne: '', playerTwo: '', rounds: 0 })
+  }
+
+  reset(setSpaces, setWin, setPlayer, setRound) {
     setSpaces(['', '', '', '', '', '', '', '', '']);
     setWin('');
     setPlayer('X');
