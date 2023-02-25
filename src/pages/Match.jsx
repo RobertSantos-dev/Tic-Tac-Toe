@@ -4,6 +4,7 @@ import ContextApi from '../context/ContextApi';
 import Icons from '../components/matchComponents/Icons';
 import Board from '../components/matchComponents/Board';
 import ButtonNext from '../components/matchComponents/ButtonNext';
+import Round from '../components/matchComponents/Round';
 
 import { Verify, Interations } from '../services/MatchService';
 import '../styles/matchStyles/Match.css';
@@ -11,7 +12,7 @@ import '../styles/matchStyles/MatchMobile.css';
 
 export default function Match() {
   const {
-    inform, player, history, spaces,
+    inform, player, history, spaces, round,
     setUrl, setTie, setWin, setPlayer,
   } = useContext(ContextApi);
 
@@ -39,6 +40,7 @@ export default function Match() {
     <main>
       <Icons />
       <Board interations={ interations } />
+      <Round />
       <ButtonNext verify={ verify } interations={ interations } />
     </main>
   )

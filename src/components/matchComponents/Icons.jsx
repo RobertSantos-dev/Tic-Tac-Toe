@@ -9,11 +9,25 @@ export default function Icons() {
     <section className='section-icons'>
       <div className={ `icon1 ${player === 'X' ? 'event1' : ''}` }>
         <BsPersonFill />
-        <p>{ inform.playerOne }</p>
+        <p
+          id='p-player-id-1'
+          className={`p-player ${player === 'X' ? 'p-player-x' : ''}`}
+        >
+         X
+        </p>
+        {' '}
+        <p className='p-name'>{ inform.playerOne }</p>
       </div>
       <div className={ `icon2 ${player === 'O' ? 'event2' : ''}` }>
         <BsPersonFill />
-        <p>{ inform.playerTwo }</p>
+        <p
+          id='p-player-id-2'
+          className={`p-player ${player === 'O' ? 'p-player-o' : ''}`}
+        >
+          O
+        </p>
+        {' '}
+        <p className='p-name'>{ inform.playerTwo }</p>
       </div>
     </section>
   );

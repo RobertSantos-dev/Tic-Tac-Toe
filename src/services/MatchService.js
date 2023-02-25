@@ -31,7 +31,7 @@ export class Verify {
     setInform({ playerOne: '', playerTwo: '', rounds: 0 })
   }
 
-  reset(setSpaces, setWin, setPlayer, setRound) {
+  reset(setSpaces, setWin, setPlayer) {
     setSpaces(['', '', '', '', '', '', '', '', '']);
     setWin('');
     setPlayer('X');

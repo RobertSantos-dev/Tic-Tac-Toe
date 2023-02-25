@@ -28,7 +28,7 @@
 
 .match {
   flex-wrap: wrap;
-  top: 20%;
+  top: 28%;
   width: 460px;
   z-index: 2;
 }
@@ -62,21 +62,22 @@
   text-shadow: 0 0 5px #e0af68;
 }
 
-.btn-board-x:disabled, .icon1 svg {
+.btn-board-x:disabled, .icon1 svg, #p-player-id-1 {
   color: var(--color-x);
 }
 
-.btn-board-o:disabled, .icon2 svg {
+.btn-board-o:disabled, .icon2 svg, #p-player-id-2 {
   color: var(--color-o);
 }
 
 .btn-next {
-  background-color: #b4f9f8;
+  background-color: #bb9af7;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 17px;
-  padding: 5px;
+  font-size: 23px;
+  padding: 7px;
   transition: 0.3s ease;
+  width: 25%;
 }
 
 .btn-next:hover {
@@ -90,7 +91,7 @@
 .section-icons {
   justify-content: space-between;
   width: 80%;
-  top: 30%;
+  top: 32%;
   z-index: 1;
 }
 
@@ -100,26 +101,42 @@
 
 .icon1, .icon2 {
   border-radius: 40px;
-  box-shadow: 0 0 4px black;
+  box-shadow: 0 0 2px black;
 }
 
 .event1, .event2 {
   box-shadow: 0 0 15px black;
 }
 
-.event1 svg, .event2 svg {
+.event1 svg, .event2 svg, .section-round p, .btn-next, .p-player {
   transition: 0.3s ease;
 }
 
-.event1 svg {
-  filter: drop-shadow(0 0 5px var(--color-x));
+.event1 svg, .p-player-x {
+  filter: drop-shadow(0 0 7px var(--color-x));
 }
 
-.event2 svg {
-  filter: drop-shadow(0 0 5px var(--color-o));
+.event2 svg, .p-player-o {
+  filter: drop-shadow(0 0 7px var(--color-o));
 }
 
-.section-icons div p {
+.p-player, .p-name, .section-round {
   text-align: center;
+}
+
+.p-name {
   font-size: 19px;
+}
+
+.p-player {
+  font-size: 35px;
+}
+
+.section-round {
+  font-size: 23px;
+  margin: 0 auto 10px auto;
+}
+
+.section-round strong {
+  color: #f7768e;
 }

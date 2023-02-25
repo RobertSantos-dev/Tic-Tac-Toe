@@ -23,9 +23,13 @@
   .icon1, .icon2 {
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 5px;
     width: 37%;
+  }
+
+  #p-player-id-1 {
+    order: 3;
   }
 
   .icon2 svg {
@@ -33,7 +37,7 @@
   }
 
   .match {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     position: relative;
     width: 390px;
     left: 50%;  
@@ -46,10 +50,35 @@
   }
 }
 
-@media screen and (max-width: 376px) {
-  .section-icons svg {
-    font-size: 120px;
+@media screen and (max-width: 720px) {
+  .icon1, .icon2 {
+    width: 47%;
   }
+
+  .p-player {
+    font-size: 30px;
+  }
+
+  .section-icons svg {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .p-player {
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+
+  .btn-next {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  /* .section-icons svg {
+    font-size: 150px;
+  } */
 
   .icon1, .icon2 {
     width: 45%;
@@ -57,11 +86,15 @@
   }
 
   .match {
-    width: 360px;
+    width: 340px;
   }
 
   .btn-board {
-    height: 120px;
-    width: 120px;
+    height: 110px;
+    width: 110px;
+  }
+
+  .section-icons svg {
+    display: none;
   }
 }

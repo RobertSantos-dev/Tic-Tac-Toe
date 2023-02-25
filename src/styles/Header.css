@@ -1,9 +1,13 @@
+/* font-family: 'Tilt Warp', cursive; */
+
 header {
-  margin-bottom: 50px;
+  background-color: #414868;
+  margin-bottom: 25px;
   transition: 0.5s ease;
 }
 
 .h1-match, .h1-menu {
+  font-family: 'Tilt Warp', cursive;
   line-height: 1.1;
   text-align: center;
 }
