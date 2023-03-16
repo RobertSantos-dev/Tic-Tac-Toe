@@ -10,6 +10,8 @@ Conhecido tambem como Jogo da Velha, esse projeto pessoal é uma aplicação sim
 
 [Tecnologias e Ferramentas](#tecnologias-e-ferramentas)
 
+[Instalação](#instalação)
+
 <br>
 
 ## Explicação
@@ -28,20 +30,20 @@ Conhecido tambem como Jogo da Velha, esse projeto pessoal é uma aplicação sim
 
 <br>
 
-O projeto <strong>Tic Tac Toe</strong>. Foi criado, com objetivo de colocar em pratica diversos conhecimentos em <em>FrontEnd</em> através da biblioteca REACT, CSS puro, Responsividade e outras dependencias usando NPM.
+O projeto <strong>Tic Tac Toe</strong>. Foi criado, com objetivo de colocar em pratica diversos conhecimentos em _FrontEnd_ através da biblioteca ***REACT***, ***CSS puro***, ***Responsividade*** e outras dependencias usando ***NPM***.
 
-A aplicação inicia na rota "/", onde sera mostrado um botão escrito "Começar" que ao ser clicado sera disponibilizado um pequeno formulario que devera ser preenchido com os seguintes dados:
+A aplicação inicia na rota `/`, onde sera mostrado um botão escrito `Começar` que ao ser clicado sera disponibilizado um pequeno formulario que devera ser preenchido com os seguintes dados:
 
 - Nome do 1° jogador(a)
 - Nome do 2° jogador(a)
 - Numero de rodadas que ambos vão jogar(o limite de Rodadas são 10)
 
-Ao finalizar essa etapa, o usúario podera seguir clicando no botão de "Iniciar". E assim ter acesso ao jogo que acontecera em multiplayer. Porem esse jogo possui algumas regras:
+Ao finalizar essa etapa, o usúario podera seguir clicando no botão de `Iniciar`. E assim ter acesso ao jogo que acontecera em multiplayer. Porem esse jogo possui algumas regras:
 
-- Em caso de empate a partida tera de ser <strong>Reiniciada</strong>
-- Em caso de vitória podera prosseguir para a <strong>Proxima</strong> rodada.
+- Em caso de empate a partida tera de ser **Reiniciada**
+- Em caso de vitória podera prosseguir para a **Proxima** rodada.
 
-Assim que todas as rodadas forem feitas, o usuario deverar retornar para a rota "/", onde poderá solicitar outra partida.
+Assim que todas as rodadas forem feitas, o usuario deverar retornar para a rota `/`, onde poderá solicitar outra partida.
 
 <br>
 
@@ -56,3 +58,24 @@ Durante o desenvolvimento, essas foram as tecnologias, metodos e ferramentas usa
 - React Hooks
 - React Router Dom
 - VS Code
+
+<br>
+
+## Instalação
+
+```bash
+# Abra um terminal e copie este repositório com o comando
+
+# Entre na pasta
+cd Tic Tac Toe/
+
+# Rode um destes comandos para instalar as dependências
+yarn install
+ou 
+npm install
+
+# Rode este comando para executar a aplicação
+npm run dev
+
+# Copie o endereço de localhost do terminal e cole na navegador.
+```
