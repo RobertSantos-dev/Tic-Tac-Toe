@@ -15,18 +15,24 @@ Conhecido tambem como Jogo da Velha, esse projeto pessoal é uma aplicação sim
 <br>
 
 ## Explicação
-### Desktop
-<div align="center">
-  <img src="./img/printTela1.png" width="45%" />
-  <img src="./img/printTela2.png" width="45%" />
-</div>
 
-### Mobile
-<div align="center">
-  <img src="./img/printTelaMobile3.png" width="14.7%" />
-  <img src="./img/printTelaMobile2.png" width="15%" />
-  <img src="./img/printTelaMobile1.png" width="15.1%" />
-</div>
+<details>
+  <summary>Desktop</summary>
+  <div align="center">
+    <img src="./img/printTela1.png" width="45%" />
+    <img src="./img/printTela2.png" width="45%" />
+  </div>
+</details>
+
+<details>
+  <summary>Mobile</summary>
+
+  <div align="center">
+    <img src="./img/printTelaMobile3.png" width="14.7%" />
+    <img src="./img/printTelaMobile2.png" width="15%" />
+    <img src="./img/printTelaMobile1.png" width="15.1%" />
+  </div>
+</details>
 
 <br>
 
@@ -65,6 +71,7 @@ Durante o desenvolvimento, essas foram as tecnologias, metodos e ferramentas usa
 
 ```bash
 # Abra um terminal e copie este repositório com o comando
+git clone git@github.com:RobertSantos-dev/Tic-Tac-Toe.git
 
 # Entre na pasta
 cd Tic Tac Toe/
