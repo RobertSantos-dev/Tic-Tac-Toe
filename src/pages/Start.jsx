@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import ContextApi from '../context/ContextApi';
 
 import FormStart from '../components/startComponents/FormStart';
+import RequirementsStart from '../components/startComponents/RequirementsStart';
 import Button from '../components/all/Button';
 
 import '../styles/startStyles/Start.css';
@@ -25,7 +26,12 @@ function Start() {
             text='Começar'
           />
       )}
-      { isForm && <FormStart /> }
+      { isForm && (
+        <>
+          <RequirementsStart />
+          <FormStart />
+        </>
+      )}
     </section>
   );
 }
