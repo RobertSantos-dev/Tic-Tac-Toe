@@ -19,7 +19,6 @@ Conhecido tambem como Jogo da Velha, esse projeto pessoal é uma aplicação sim
 <details>
   <summary>Desktop</summary>
   <div align="center">
-    <img src="./img/printTela1.png" width="45%" />
     <img src="./img/printTela2.png" width="45%" />
   </div>
 </details>
@@ -51,6 +50,8 @@ Ao finalizar essa etapa, o usúario podera seguir clicando no botão de `Iniciar
 
 Assim que todas as rodadas forem feitas, o usuario deverar retornar para a rota `/`, onde poderá solicitar outra partida.
 
+**OBS**: Esta aplicação utiliza Testes de integração.
+
 <br>
 
 ## Tecnologias e Ferramentas
@@ -63,6 +64,7 @@ Durante o desenvolvimento, essas foram as tecnologias, metodos e ferramentas usa
 - React funcional
 - React Hooks
 - React Router Dom
+- RTL/Jest (Testes de integração)
 - VS Code
 
 <br>
