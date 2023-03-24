@@ -19,6 +19,7 @@ Conhecido tambem como Jogo da Velha, esse projeto pessoal é uma aplicação sim
 <details>
   <summary>Desktop</summary>
   <div align="center">
+    <img src="./img/printTela1.png" width="45%" />
     <img src="./img/printTela2.png" width="45%" />
   </div>
 </details>
