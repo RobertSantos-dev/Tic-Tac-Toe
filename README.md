@@ -1,7 +1,7 @@
 # Projeto Tic Tac Toe
 
 ## Resumo
-Conhecido tambem como Jogo da Velha, esse projeto pessoal é uma aplicação simples que buscar trazer diverção para aqueles que gostam de um passatempo.
+Conhecido tambem como Jogo da Velha, esse projeto pessoal é uma aplicação simples que buscar trazer diversão para aqueles que gostam de um passatempo.
 
 <br>
 
